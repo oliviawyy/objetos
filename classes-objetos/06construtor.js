@@ -1,8 +1,23 @@
-// classe é uma definicao. como um objeto deve ser
+// CONSTRUTOR: É o primeiro metodo executado quando fazemos 'new Senai()'.
+// ele serve para "exigir" os dados necessarios logo na criaçao
 class Senai{
-    codigo;
-    cidade;
-    // dentro de uma classe nao precisa da palavra function para criar um metodo
+    constructor(codigo, cidade){
+        this.codigo = codigo;
+        this.cidade = cidade;
+    }
 
-    /* serve como um molde para construir novos objetos com
+    // metodo para exibir as informacoes formatadas
+    dadosEscola(){
+        console.log(`Unidade: ${this.cidade} | Código Interno: ${this.codigo}`);
+    }
 }
+    
+
+// a criacao agora é feita em apenas uma linha, passando os valores como argumentos para o construtor
+const escolaA = new Senai(603, 'Araraquara');
+const escolaB = new Senai(145, 'São Carlos');
+const escolaC = new Senai(545, 'Américo Brasiliense');
+
+escolaA.dadosEscola();
+escolaB.dadosEscola();
+escolaC.dadosEscola();

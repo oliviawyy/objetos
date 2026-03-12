@@ -8,8 +8,8 @@ class Senai{
     }
 }
 
-// instancia é uma ocorrencia. criacao de um novo objeto, uma nova ocorrencia da classe
-// criando uma instancia(uma nova escola)
+// instancia: é o objeto real criado a partir do molde
+// usamos 'const' para garantir que a variavel semore aponte para este objeto
 
 const senaiArqa = new Senai();
 // incrementando o codigo
@@ -23,3 +23,4 @@ senaiMat.cidade = 'Matão';
 // exibindo os dados no console
 senaiArqa.descreverEscola();
 senaiMat.descreverEscola();
+
