@@ -1,0 +1,1 @@
+const num = document.querySelector("intervalo__valor--max")
