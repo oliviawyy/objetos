@@ -1,13 +1,13 @@
 :root {
-    --color-primary: #a11a02;
-    --color-secondary: #7c0101;
+    --color-primary: #0281a1;
+    --color-secondary: #013a7c;
     --color-text: #ffffff;
-    --color-area-sorteio: #bababa;
+    --color-area-sorteio: #cef7f8;
     --color-text-dark: #192A56;
     --color-button: #000000;
     --color-button-bg: #ffffff;
     --color-button-hover: greenyellow;
-    --color-numero-sorteado-bg: darkgreen;
+    --color-numero-sorteado-bg: rgb(75, 189, 75);
     --color-historico-hover: #F79F1F;
   }
   
