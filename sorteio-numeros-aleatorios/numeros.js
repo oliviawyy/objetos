@@ -28,13 +28,35 @@ const atualizarValorSlider = () => {
     document.querySelector('.intervalo__valor--max').textContent = max;
 };
 
+
+// sliderMin.addEventListener('input', atualizarValorSlider);
+// sliderMax.addEventListener('input', atualizarValorSlider);
+
+// // inicalizar interface com valores atuais
+// atualizarValorSlider();
+
+const validarIntervalo = () => {
+    const min = Number(sliderMin.value);
+    const max = Number(sliderMax.value);
+
+    if (min > max) {
+        sliderMin.value = max;
+        mensagem.textContent = 'O valor mínimo não pode ser maior que o valor máximo.';
+    } else if (max < min) {
+        sliderMax.value = min;
+        mensagem.textContent = 'O valor máximo não pode ser menor que o valor mínimo.';
+    } else {
+        mensagem.textContent = '';
+    }
+
+    atualizarValorSlider();
+};
+
 //evento para atualizar o valor em tempo real
-sliderMin.addEventListener('input', atualizarValorSlider);
-sliderMax.addEventListener('input', atualizarValorSlider);
+sliderMin.addEventListener('input', validarIntervalo);
+sliderMax.addEventListener('input', validarIntervalo);
 
-// inicalizar interface com valores atuais
 atualizarValorSlider();
-
 
 const gerarNumeroAleatorio = (min, max) => {
     let numeroAleatorio = Math.floor(Math.random() * (max - min + 1 ));
@@ -108,3 +130,8 @@ const validarInputs = () =>{
         return true;
     }
 }
+
+
+
+
+
